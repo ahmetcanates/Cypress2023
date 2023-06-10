@@ -66,6 +66,12 @@ describe('CheckBoxes',() => {
         cy.get('li a.sf-with-ul').eq(0).click()
         
         cy.get("input[type='checkbox']").click({multiple:true})
+        //click -> tek bir web elemente tiklar 
+        //click({multiple:true}) -> bu sekilde yazarsak tum web elementlere tiklar
+
+        cy.get("input[type='checkbox']").parent().should('have.class','checked')
+        //19 checkboxi tiklanmis mi diye assert etti. locate'imizin bir ustundeki(parenti) tagin,
+        //class attribute'unun degeri checked mi diye kontrol ettik.
     })
 
 
