@@ -26,7 +26,7 @@ describe('CheckBoxes',() => {
         cy.get('#layered_category_4').uncheck().should('not.be.checked')
     })
 
-    it.only('All CheckBoxes 1', () => {
+    it('All CheckBoxes 1', () => {
 
         cy.visit('http://automationpractice.pl/index.php')
         cy.get('li a.sf-with-ul').eq(0).click()
@@ -34,8 +34,38 @@ describe('CheckBoxes',() => {
         //TUM CHECKBOXLARA TIKLA
         cy.get("input[type='checkbox']").check()
         cy.wait(3000)
+
+        //TIKLAMALARI KALDIR
         cy.get("input[type='checkbox']").uncheck()
         
+    })
+
+    it('All CheckBoxes 2', () => {
+
+        cy.visit('http://automationpractice.pl/index.php')
+        cy.get('li a.sf-with-ul').eq(0).click()
+        
+        //1.kutuya tikla
+        cy.get("input[type='checkbox']").eq(0).check().should('be.checked')
+
+        //5.kutuya tikla
+        cy.get("input[type='checkbox']").eq(4).check().should('be.checked')
+
+        //12.kutuya tikla
+        cy.get("input[type='checkbox']").eq(11).check().should('be.checked')
+
+        //TIKLAMALARI KALDIR
+        cy.get("input[type='checkbox']").eq(0).uncheck().should('not.be.checked')
+        //uncheck() = tiklamayi kaldirir
+        //should('not.be.checked') = tikli olmadigini dogrular
+    })
+
+    it.only('All CheckBoxes 2', () => {
+
+        cy.visit('http://automationpractice.pl/index.php')
+        cy.get('li a.sf-with-ul').eq(0).click()
+        
+        cy.get("input[type='checkbox']").click({multiple:true})
     })
 
 

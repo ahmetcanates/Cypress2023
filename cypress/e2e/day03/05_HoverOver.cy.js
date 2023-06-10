@@ -9,7 +9,7 @@ describe('HoverOver',() => {
 
         cy.contains('Change country/region.').click()
 
-        cy.get("#icp-dropdown").select('Turkey (Türkiye)',{force:true})
+        cy.get("#icp-dropdown").select('Turkey (Türkiye)', {force:true})
 
     })
 
