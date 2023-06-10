@@ -31,10 +31,6 @@ describe('IFrame',() => {
         cy.get('.large-4 > div > a').should('contain.text','Elemental Selenium').click()
     })
 
-    it('', () => {
-
-        
-    })
 
 
 })

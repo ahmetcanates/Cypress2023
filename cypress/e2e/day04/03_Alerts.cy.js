@@ -47,7 +47,7 @@ describe('Alerts',() => {
         
         cy.window() //pop up pencereleri kontrol ediyoruz
         .then(($windowsElement)=>{
-            //$windowsElement -> propmt'a bilgi girer
+            //$windowsElement -> prompt'a bilgi girer
             cy.stub($windowsElement, 'prompt').returns('Cypress')
             cy.wait(2000) 
             cy.get(':nth-child(3) > button').click()
