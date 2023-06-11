@@ -2,15 +2,15 @@
 
 describe('Custom Command 2',() => {
 
-    it('Amazon Search', () => {
+    it.only('Amazon Search', () => {
         cy.amazonSearch('iphone')
+        cy.get('.a-color-state').should('include.text','iphone')
+
+        cy.get('#twotabsearchtextbox').should('have.value','iphone')
+        //html kodlarindaki arama butonundaki value="iphone" degerini assert ettik
         
+        cy.screenshot()
 
-    })
-
-    it('', () => {
-
-        
     })
 
 
