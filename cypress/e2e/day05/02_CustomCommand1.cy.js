@@ -26,9 +26,9 @@ describe('Custom Command1',() => {
 
         cy.ap_login('omerzed5454@gmail.com', 'deneme12')
         //ap_login -> commands.js dosyasinda olusturdugumuz fonksiyon
-        cy.get('#center_column > :nth-child(2)').should('be.visible')
+        cy.get('#center_column > :nth-child(2)').should('be.visible')//1.assert
 
-        cy.url().should('include','controller=authentication')
+        cy.url().should('include','controller=authentication')//2.assert
         
     })
 

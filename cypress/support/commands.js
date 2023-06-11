@@ -37,3 +37,9 @@ Cypress.Commands.add('ap_login',(email, password) => {
 
 
 //Amazon Arama: Girilen urun icin arama
+Cypress.Commands.add('amazonSearch', (productName) => {
+    cy.visit('https://www.amazon.com/')
+    cy.get('#twotabsearchtextbox').type(productName)
+    cy.get('#nav-search-submit-button').click()
+
+})
