@@ -1,0 +1,5 @@
+"test-dashboard":  "npx cypress run --record --key keyindegeri"
+butun testler calisip dashboarda gonderilecek
+
+"dashboard_day02": "npx cypress run --spec 'cypress/e2e/day02/' --record --key keyindegeri"
+sadece day02 klasorundeki testler calisacak ve dashboarda gonderilecek
