@@ -11,7 +11,7 @@ module.exports = defineConfig({
     //"video":true testlerin videolarini kaydeder
     //default olarak "video":true 'dur.
 
-    "retries":2
+    //"retries":2
     //TEST FAIL OLDUGUNDA onu kac kere daha calistirmasi gerektigini belirtiyoruz
     //"retries":2 => 1 kere calistirip hata aldiginda 2 kere daha dene
   },
